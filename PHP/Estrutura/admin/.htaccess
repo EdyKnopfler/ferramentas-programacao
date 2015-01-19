@@ -1,0 +1,8 @@
+RewriteEngine on
+
+RewriteRule  !\.(gif|jpg|png|css|js|ico|xml|html|JPG|pdf|ttf|eot|mp4)$ index.php
+
+DefaultLanguage pt-BR
+AddDefaultCharset UTF-8
+
+#AddType application/x-httpd-php53 .php
