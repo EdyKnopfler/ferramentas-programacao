@@ -1,0 +1,49 @@
+package TextSearchZeos;
+
+{$R *.res}
+{$R 'UTextSearchZeos.dcr'}
+{$R 'UDAwTextSearchZeos.dcr'}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'TextSearch for Zeos Access'}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  vcldb,
+  ZComponentDesign,
+  ZPlain,
+  ZCore,
+  ZDbc,
+  ZParseSql,
+  GridFormPkg,
+  designide,
+  vclactnband,
+  vclx;
+
+contains
+  UTextSearchZeos in 'UTextSearchZeos.pas',
+  UDAwTextSearchZeos in 'UDAwTextSearchZeos.pas';
+
+end.
