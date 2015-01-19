@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/resources/**" location="/resources/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
+	<!-- ÉDERSON 18/01/2015: Modifiquei aqui para procurar itens com @Repository em todos os pacotes :) -->
+	<context:component-scan base-package="br.com.gamecursos.tarefas" />
+	
+	<!-- ÉDERSON 18/01/2015: DataSource do Spring (cria a conexão) -->
+	<beans:bean id="tarefasDataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+		<beans:property name="driverClassName" value="org.postgresql.Driver" />
+		<beans:property name="url" value="jdbc:postgresql://localhost:5432/Estudo1" />
+		<beans:property name="username" value="postgres" />
+		<beans:property name="password" value="jethrotull" />
+	</beans:bean>
+	
+	<!-- ÉDERSON 18/01/2015: EntityManagerFactory do JPA gerenciada pelo Spring (cria a conexão) -->
+	<beans:bean id="entityManagerFactory" 
+	            class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<beans:property name="dataSource" ref="tarefasDataSource" />
+		<beans:property name="jpaVendorAdapter">
+			<beans:bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+		</beans:property>
+	</beans:bean>
+	
+	<!-- ÉDERSON 18/01/2015: Controle transacional -->
+	<beans:bean id="batatinhaQuandoNasce"
+	      class="org.springframework.orm.jpa.JpaTransactionManager">
+		<beans:property name="entityManagerFactory" ref="entityManagerFactory"/>
+	</beans:bean>
+	
+</beans:beans>
