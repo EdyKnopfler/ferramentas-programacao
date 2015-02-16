@@ -1,0 +1,10 @@
+1. Adição
+2. Subtração
+3. Multiplicação
+4. Divisão
+5. Sair
+Digite sua opção: Digite um valor: Digite mais um valor: Resultado: 15.0
+Digite sua opção: Digite um valor: Digite mais um valor: Resultado: 5.0
+Digite sua opção: Digite um valor: Digite mais um valor: Resultado: 50.0
+Digite sua opção: Digite um valor: Digite mais um valor: Resultado: 2.0
+Digite sua opção: 
