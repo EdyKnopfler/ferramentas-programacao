@@ -1,0 +1,15 @@
+{
+  "name": "acessando-postgres",
+  "version": "1.0.0",
+  "description": "Acessando o PostgreSQL pelo Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Eu uai",
+  "license": "Apache",
+  "dependencies": {
+    "pg": "^4.2.x",
+    "sequelize": "^2.0.x"
+  }
+}
