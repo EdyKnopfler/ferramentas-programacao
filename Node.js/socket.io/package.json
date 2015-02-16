@@ -1,0 +1,15 @@
+{
+  "name": "teste-socket-io",
+  "version": "1.0.0",
+  "description": "Servidor de teste do Socket.IO",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "",
+  "dependencies": {
+    "socket.io": "^1.3.x",
+    "ejs": "^2.2.x",
+    "express": "^4.11.x"
+  }
+}

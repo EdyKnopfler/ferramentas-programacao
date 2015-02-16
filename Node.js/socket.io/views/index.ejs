@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>Socket.IO</title>
+   <script src="js/jquery.min.js"></script>
+   <script src="js/jquery.flot.min.js"></script>
+   <script src="js/socket.io.js"></script>
+   <script>
+      var socket = io.connect();
+      var items = [];
+      var counter = 0;
+
+      socket.on('data', function(data) {
+         items.push([counter, data]);
+         counter++;
+         $.plot($('#placeholder'), [items]);
+      });
+   </script>
+</head>
+
+<body>
+   <h1>JQuery Flot e Socket.IO</h1>
+   <div id="placeholder" style="width: 600px; height: 300px"></div>
+</body>
+
+</html>
