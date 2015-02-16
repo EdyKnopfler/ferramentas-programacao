@@ -1,0 +1,18 @@
+{
+  "name": "miniblog",
+  "version": "1.0.0",
+  "description": "Mini-blog escrito em Express 4",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "keywords": [
+    "fuc"
+  ],
+  "author": "Éderson The Gostosão",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.2.4",
+    "express": "^4.11.2"
+  }
+}
