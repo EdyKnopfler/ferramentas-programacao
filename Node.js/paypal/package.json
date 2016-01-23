@@ -1,0 +1,15 @@
+{
+  "name": "paypal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "paypal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "paypal-rest-sdk": "^1.6.8"
+  }
+}
