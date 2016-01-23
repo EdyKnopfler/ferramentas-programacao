@@ -4,8 +4,8 @@ var paypal = require('paypal-rest-sdk');
 
 paypal.configure({
    "host" : "api.sandbox.paypal.com",           
-   "client_id" : "AVue65uqnzqTsci7TyePS8xvCAZPyVOB-60iZy4CfIo6mQcY7uBlQu6c1D3zZYUSrh7G8afKVYmChbAV",
-   "client_secret" : "EEkdBEmo1hCvqo-87dAX9EdZQ_zpnrWtCRppE2J5jAcgEHixudZ7O7rVaNp1823kOZZEQCE4nYd3tguh"
+   "client_id" : "blá blá blá",
+   "client_secret" : "blé blé blé"
 });
 
 
